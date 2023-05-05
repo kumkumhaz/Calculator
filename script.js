@@ -2,7 +2,6 @@ let string = "";
 let buttons = document.querySelectorAll('.buttons');
 Array.from(buttons).forEach((button)=>{
     button.addEventListener('click', (e)=>{
-     try{
         if(e.target.innerHTML == '='){
             string = eval(string);
             document.querySelector('input').value = string;
@@ -22,9 +21,7 @@ Array.from(buttons).forEach((button)=>{
             string = string + e.target.innerHTML;
             document.querySelector('input').value = string; 
         }
-     }
-     catch{
-        string = 'Error'
-     }
+     
+     
     })
 })
